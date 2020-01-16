@@ -18,7 +18,7 @@ By quantifying US/MX trade and US/MX mobility data, I attempt to understand if t
 
 Subquestions this exploration pursues includes the following:
 
-# | Question
+Num | Question
 ------------ | -------------
 1) | Though trade volume has increased, how have specific commodities changed over time?
 2) | Where do the economic benefits go?
