@@ -10,17 +10,15 @@ Leveraging EDA and machine learning algorithims on this data can help provide gr
 1. Between two countries, whether that is tourism, permanent residency, or temporary residency can increase mutual understanding binationally
 1. Increased trade between two economies can cause both parties to experience mutual economic gain thereby incentiving both countries to continue trading
 
+**General Imports from Mexico to the United States over time in (billions)**
+
+![image](https://user-images.githubusercontent.com/48306129/72568970-20702580-386e-11ea-81f8-0b0fccdc2e48.png)
+
 By quantifying US/MX trade and US/MX mobility data, I attempt to understand if these are two indicators of the current state of the MS/US relationship. Using a Random Forests algorithim, can further explore the granuality of trade and mobility trends. 
 
 Other questions I will pursue include the following:
 
-
-
 What can this increase in transactions and interactions tell us about the economic benefits that both countries may experience? Can trade volumes be an indicator of increased binational exchange? Lastly, can understanding trade volumnes give us insight into how the current state of the MX/US relationship?
-
-**General Imports from Mexico to the United States over time in (billions)**
-
-![image](https://user-images.githubusercontent.com/48306129/72568970-20702580-386e-11ea-81f8-0b0fccdc2e48.png)
 
 ## Key datasets
 The US Internnational Trade Commission has publically accessible data to review trade volumes in depth. THe US International Trade Commission leverages datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
