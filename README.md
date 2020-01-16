@@ -21,7 +21,7 @@ Subquestions this exploration pursues includes the following:
 Field | Additional Project Question
 ------------ | -------------
 Trade | Though trade volume has increased, how have specific commodities changed over time?
-Economic Gail | Where do the economic benefits go?
+Economic Gain | Where do the economic benefits go?
 Binational Environment | For lower peaks in trade volumes, what political, social, or economic dynamics were occurring at the time?
 
 
