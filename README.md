@@ -7,8 +7,10 @@ Trade is an integral part of the relationship between Mexico and the United Stat
 
 Leveraging EDA and machine learning algorithims on this data can help provide greater insight into understanding if increased trade also catalyzes increased movement of people between both countries, as an indicator of a growing MX-US relationship. This claim depends on two key hypothesis:
 
-1. Between two countries, whether that is tourism, permanent residency, or temporary residency can increase mutual understanding binationally
+1. Movement between two countries, whether that is tourism, permanent residency, or temporary residency can increase mutual binational understanding from a social and cultural perspective 
+    1. A key reason to bring in mobility data!
 1. Increased trade between two economies can cause both parties to experience mutual economic gain thereby incentiving both countries to continue trading
+    1. Recognizing that it is important to take a look at the industry impact
 
 **General Imports from Mexico to the United States over time in (billions)**
 
@@ -24,8 +26,6 @@ Trade | Though trade volume has increased, how have specific commodities changed
 Economic Gain | Where do the economic benefits go?
 Binational Environment | For lower peaks in trade volumes, what political, social, or economic dynamics were occurring at the time?
 
-
-What can this increase in transactions and interactions tell us about the economic benefits that both countries may experience? Can trade volumes be an indicator of increased binational exchange? Lastly, can understanding trade volumnes give us insight into how the current state of the MX/US relationship?
 
 ## Key datasets
 The US Internnational Trade Commission has publically accessible data to review trade volumes in depth. THe US International Trade Commission leverages datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
