@@ -1,9 +1,20 @@
 # Exploring Binational Trade Volumes
-leveraging exploratory data analysis and machine learning algorithms to extract insights on binational trade 
+leveraging exploratory data analysis and machine learning algorithms to extract insights on the binational trade relationship between Mexico and the United States
 
 ## Why explore binational trade volumes between Mexico and the United States?
 
-Trade is an integral part of the relationship between Mexico and the United States and as shown by the chart below sourced with data from the US International Trade Commission, general Imports from Mexico to the US have been increasing over time. 
+Trade is an integral part of the relationship between Mexico and the United States and as shown by the chart below, sourced with data from the US International Trade Commission, general Imports from Mexico to the US have been increasing over time.
+
+Leveraging EDA and machine learning algorithims on this data can help provide greater insight into understanding if increased trade also catalyzes increased movement of people between both countries, as an indicator of a growing MX-US relationship. This claim depends on two key hypothesis:
+
+1. Between two countries, whether that is tourism, permanent residency, or temporary residency can increase mutual understanding binationally
+1. Increased trade between two economies can cause both parties to experience mutual economic gain thereby incentiving both countries to continue trading
+
+By quantifying US/MX trade and US/MX mobility data, I attempt to understand if these are two indicators of the current state of the MS/US relationship. Using a Random Forests algorithim, can further explore the granuality of trade and mobility trends. 
+
+Other questions I will pursue include the following:
+
+
 
 What can this increase in transactions and interactions tell us about the economic benefits that both countries may experience? Can trade volumes be an indicator of increased binational exchange? Lastly, can understanding trade volumnes give us insight into how the current state of the MX/US relationship?
 
