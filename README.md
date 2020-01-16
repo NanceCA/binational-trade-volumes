@@ -16,7 +16,14 @@ Leveraging EDA and machine learning algorithims on this data can help provide gr
 
 By quantifying US/MX trade and US/MX mobility data, I attempt to understand if these are two indicators of the current state of the MS/US relationship. Using a Random Forests algorithim, can further explore the granuality of trade and mobility trends. 
 
-Other questions I will pursue include the following:
+Subquestions this exploration pursues includes the following:
+
+/# | Question
+------------ | -------------
+1. | Though trade volume has increased, how have specific commodities changed over time?
+1. | Where do the economic benefits go?
+1. | For lower peaks in trade volumes, what political, social, or economic dynamics were occurring at the time?
+
 
 What can this increase in transactions and interactions tell us about the economic benefits that both countries may experience? Can trade volumes be an indicator of increased binational exchange? Lastly, can understanding trade volumnes give us insight into how the current state of the MX/US relationship?
 
