@@ -18,11 +18,11 @@ By quantifying US/MX trade and US/MX mobility data, I attempt to understand if t
 
 Subquestions this exploration pursues includes the following:
 
-Item | Subquestion
+Field | Additional Project Question
 ------------ | -------------
-Subquestion | Though trade volume has increased, how have specific commodities changed over time?
-Subquestion | Where do the economic benefits go?
-Subquestion | For lower peaks in trade volumes, what political, social, or economic dynamics were occurring at the time?
+Trade | Though trade volume has increased, how have specific commodities changed over time?
+Economic Gail | Where do the economic benefits go?
+Binational Environment | For lower peaks in trade volumes, what political, social, or economic dynamics were occurring at the time?
 
 
 What can this increase in transactions and interactions tell us about the economic benefits that both countries may experience? Can trade volumes be an indicator of increased binational exchange? Lastly, can understanding trade volumnes give us insight into how the current state of the MX/US relationship?
