@@ -3,10 +3,11 @@ leveraging exploratory data analysis and machine learning algorithms to extract 
 
 ## Why explore binational trade volumes between Mexico and the United States?
 
-Trade is an integral part of the relationship between Mexico and the United States and as shown by the chart below sourced with data from the US International Trade COmmission. General Imports from Mexico to the US have been increasing over time. 
+Trade is an integral part of the relationship between Mexico and the United States and as shown by the chart below sourced with data from the US International Trade Commission, general Imports from Mexico to the US have been increasing over time. 
 
 What can this increase in transactions and interactions tell us about the economic benefits that both countries may experience? Can trade volumes be an indicator of increased binational exchange? Lastly, can understanding trade volumnes give us insight into how the current state of the MX/US relationship?
 
+**General Imports from Mexico in (billions)
 
 ![image](https://user-images.githubusercontent.com/48306129/72568970-20702580-386e-11ea-81f8-0b0fccdc2e48.png)
 
