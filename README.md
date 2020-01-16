@@ -12,3 +12,11 @@ See some of the queries of interest that I've pursued below:
     Years to Report: 1997 - 2018 (Current)
     Countries: Mexico `
  ```
+ 
+ ```
+    Trade Flow: Imports for Consumption
+    Classification System: HTS (Harmonized Tariff Schedule) Items
+    Years to Report: 1997 - 2018 (Current)
+    Countries: Mexico `
+ ```
+
