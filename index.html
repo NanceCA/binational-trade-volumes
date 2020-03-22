@@ -96,7 +96,7 @@
               the nuances in the trade data (aggregate import and export volumes) and mobility data provide greater
               insight into the results of binational commerce?
             </li>
-            <li>Can travel binational travel, that may or may not come as a requirement of binational transactions,
+            <li>Can binational travel, that may or may not come as a requirement of binational transactions,
               also be an indictator strengthened cultural mutual understanding?</li>
           </ul>
           <br>
@@ -108,8 +108,8 @@
             <thead>
               <tr>
                 <th>Dataset</th>
-                <th>Key Variables</th>
                 <th>Source</th>
+                <th>Key Variables</th>
               </tr>
             </thead>
             <tbody>
@@ -129,7 +129,7 @@
                 <td>2) General Imports from Mexico to the US</td>
                 <td>US International Trade Commission<a href="https://dataweb.usitc.gov/" target="_blank"> (USITC)</td>
                 <td><strong>General Imports:</strong> The value of the total physical arrivals of merchandise from
-                  foreign countries.<br>
+                  foreign countries<br>
                   <strong>General Customs Value:</strong> The price actually paid or payable for the merchandise
                   excluding U.S. import duties, freight, insurance and other charges</td>
               </tr>
@@ -142,7 +142,7 @@
                   the complete list.<br>
                   <strong>Measure:</strong> Describes the way in which the travel was conducted. There are 12 unique
                   values including: trucks, bus passengers, pedestrians<br>
-                  <strong>Value</strong> The recorded number of individuals who traveled through the port name via the
+                  <strong>Value:</strong> The recorded number of individuals who traveled through the port name via the
                   measure</td>
               </tr>
             </tbody>
@@ -151,7 +151,8 @@
             total binational travel. This includes airport ports of entry in the United States as well as the value of
             those travelers that visit Mexico from the United States on an annual aggregate level. Unfortunately,
             reliable data on these data
-            points was not readily available. This project may be updated with these additional datapoints if found.
+            points was not readily available. This project may be updated with these additional datapoints, if
+            available.
             Stay
             tuned
             and check back periodically!</p>
@@ -175,6 +176,8 @@
       <div id="containerImports" style="width:100%; height:400px;"></div>
       <hr>
       <div id="containerExports" style="width:100%; height:400px;"></div>
+      <hr>
+      <div id="containerTravel" style="width:100%; height:400px;"></div>
     </div>
   </section>
 
@@ -386,6 +389,96 @@
         [2017, 187135652658],
         [2018, 203980108492],
         [2019, 195503311311]]
+      }]
+    });
+
+
+    Highcharts.chart('containerTravel', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'Mobility Through US-Mexico Border Ports of Entry (1996-2019)'
+      },
+      subtitle: {
+        text: 'Source: U.S. Department of Transportation(DOT)'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Year'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'Mobility (Persons or Commerce Vehicles)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: 'yr {point.x}, {point.y}'
+          }
+        }
+      },
+      series: [{
+        name: 'Mobility',
+        color: 'rgba(253, 211, 0, .5)',
+        data: [[1996, 276751448],
+        [1997, 348661488],
+        [1998, 366296614],
+        [1999, 391959396],
+        [2000, 392231869],
+        [2001, 362991511],
+        [2002, 352870123],
+        [2003, 343654239],
+        [2004, 343524676],
+        [2005, 336990567],
+        [2006, 327588026],
+        [2007, 310095754],
+        [2008, 295921230],
+        [2009, 264450245],
+        [2010, 242776894],
+        [2011, 225541089],
+        [2012, 232999664],
+        [2013, 243982227],
+        [2014, 254746277],
+        [2015, 267663436],
+        [2016, 273532405],
+        [2017, 278703002],
+        [2018, 283743197],
+        [2019, 275538145]]
       }]
     });
 
