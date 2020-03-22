@@ -15,6 +15,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/scrolling-nav.css" rel="stylesheet">
+  <!-- Including Highcharts for visualizations -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
 
 </head>
 
@@ -23,7 +25,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">GitHub Repository</a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Home</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,34 +41,108 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Models</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="https://github.com/NanceCA/binational-trade-volumes"
+              target="_blank">GitHub
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="bg-primary text-white">
-    <div class="container text-center">
-      <h1>Understanding Binational Trade Volumes</h1>
-      <p class="lead">Using machine learning to explore trends in binational trade and travel.</p>
-      <i>A capstone project</i>
+  <!-- Large Header -->
+  <header class="text-black" style="background-color:#34f1ff">
+    <div class="flex">
+      <div class="container text-left img">
+        <img src="./assets/icon.png" alt="icon" height="180" width="220">
+      </div>
+      <div class="container text-left">
+        <h1>Understanding Binational Trade Volumes</h1>
+        <p class="lead">Using machine learning to explore trends in binational trade and travel Between Mexico and the
+          United States.</p>
+        <p class="font-weight-light">A capstone project for the Deloitte Consulting Machine Learning Guild</p>
+      </div>
     </div>
   </header>
 
   <section id="about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-10 mx-auto">
           <h2>About the project</h2>
-          <p class="lead">Global commerce can generate a wide variety of favorable social, economic and political
-            implications. In particular, it can encourage a strengthened relationship between trading partners. A key
-            indicator of strengthened mutual understanding often comes in the form of binational travel.
+          <p class="lead">International commerce can generate a variety of favorable social, economic and political
+            externalities. In addition to the mutual economic gain, trade can also encourage a strengthened social and
+            political
+            bilateral relationship between trading
+            partners. </p>
+          <p class="font-weight-normal">Recognizing that international trade can often also trigger unfavorable
+            circumstances, this study
+            will focus on better understanding and optimizing the favorable components of a binational commerce
+            relationship, moving under the assumption that the broader economic system will continue to be globalized
+            and so finding ways to optimize the positive externalities is worthwhile for improved political, social and
+            economic dynamics around the world. <br><br>
+            Mexico and the United States make ideal selections for this study given
+            the intricate historical trade relationship and the interwoven dynamic in the areas of culture, business and
+            politics.
+
+            This capstone project aims to answer the following key questions through exploratory data analysis, data
+            preprocessing and multiple linear regression.
           </p>
+          <p class="lead"> What are we trying to understand?</p>
           <ul>
-            <li>Where the data comes from</li>
-            <li>The data preprocessing that was conducted</li>
-            <li>Why certain variables were chosen</li>
-            <li>The impact and next steps behind a study like this</li>
+            <li>Can travel binational travel that may or may not come as a requirement of binational transactions
+              also be an indictator strengthened cultural mutual understanding?</li>
+            <li>better understand the nuances in the trade data (aggregate import and export volumes) between the U.S.
+              and Mexico as well as border
+              crossing data to better</li>
           </ul>
+          <br>
+          <p class="lead">Ready? Let's go!</p>
+          <p>
+            About the datasets:
+          </p>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Dataset</th>
+                <th>Key Variables</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1) General Exports from US to Mexico</td>
+                <td>US International Trade Commission<a href="https://dataweb.usitc.gov/" target="_blank"> (USITC)</a>
+                </td>
+                <td><strong>Domestic Exports:</strong> Aggregate measure of goods grown, produced, or manufactured in
+                  the
+                  U.S. This
+                  includes commodities of foriegn origin that have been changed in the US<br>
+                  <strong>FAS Export Value:</strong> The Free Alongside Ship value is the value of the exports at the
+                  U.S. port based on the
+                  transaction price</td>
+              </tr>
+              <tr>
+                <td>2) General Imports from Mexico to the US</td>
+                <td>US International Trade Commission<a href="https://dataweb.usitc.gov/" target="_blank"> (USITC)</td>
+                <td><strong>General Imports:</strong> The value of the total physical arrivals of merchandise from
+                  foreign countries.<br>
+                  <strong>General Customs Value:</strong> The price actually paid or payable for the merchandise
+                  excluding U.S. import duties, freight, insurance and other charges</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="font-italic">Disclaimer: The original intent was to quantify the most comprehensive snapshot of
+            total binational travel. This includes airport ports of entry in the United States as well as the value of
+            those travelers that visiting Mexico from the United States. Unfortunately, reliable data on these data
+            points was not readily available. This project may be updated with additional datasets if found. Stay tuned
+            and check back periodically!</p>
         </div>
       </div>
     </div>
@@ -75,20 +151,24 @@
   <section id="services" class="bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-10 mx-auto">
           <h2>Exploratory Data Analysis</h2>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita
             quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore
             ut velit dignissimos.</p>
         </div>
       </div>
+      <hr>
+      <div id="containerImports" style="width:100%; height:400px;"></div>
+      <hr>
+      <div id="containerExports" style="width:100%; height:400px;"></div>
     </div>
   </section>
 
   <section id="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 mx-auto">
+        <div class="col-lg-10 mx-auto">
           <h2>Models</h2>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor,
             provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa
@@ -115,6 +195,190 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="js/scrolling-nav.js"></script>
+
+  <!-- Highcharts visualizations here -->
+
+  <script>
+    Highcharts.chart('containerImports', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'General Imports from Mexico to the United States (1996-2019)'
+      },
+      subtitle: {
+        text: 'Source: United States International Trade Commission (USITC)'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Year'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'Customs Value ($)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: 'yr {point.x}, $ {point.y}'
+          }
+        }
+      },
+      series: [{
+        name: 'Imports',
+        color: 'rgba(52, 240, 255, .5)',
+        data: [[1996, 72963189408],
+        [1997, 85872344740],
+        [1998, 94708666043],
+        [1999, 109706486039],
+        [2000, 135910533679],
+        [2001, 131432956779],
+        [2002, 134732185087],
+        [2003, 138073296952],
+        [2004, 155845665796],
+        [2005, 170197883805],
+        [2006, 198258639178],
+        [2007, 210799020880],
+        [2008, 215914854328],
+        [2009, 176537048132],
+        [2010, 229985623006],
+        [2011, 262873595958],
+        [2012, 277593639546],
+        [2013, 280556040242],
+        [2014, 295729962846],
+        [2015, 296433325024],
+        [2016, 293500606660],
+        [2017, 312808758044],
+        [2018, 346100585788],
+        [2019, 358126005418]]
+      }]
+    });
+
+    Highcharts.chart('containerExports', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'General Exports the United States to Mexico (1996-2019)'
+      },
+      subtitle: {
+        text: 'Source: United States International Trade Commission (USITC)'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Year'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'FAS Value ($)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: 'yr {point.x}, $ {point.y}'
+          }
+        }
+      },
+      series: [{
+        name: 'Exports',
+        color: 'rgba(134, 242, 0, .5)',
+        data: [[1996, 54685865249],
+        [1997, 68393219447],
+        [1998, 75369300051],
+        [1999, 81380740167],
+        [2000, 100442093551],
+        [2001, 90537433805],
+        [2002, 86076081837],
+        [2003, 83108095962],
+        [2004, 93017703250],
+        [2005, 101666660721],
+        [2006, 114562325618],
+        [2007, 119381113659],
+        [2008, 131507405077],
+        [2009, 105717657221],
+        [2010, 131817848197],
+        [2011, 159946770263],
+        [2012, 174832639247],
+        [2013, 181558730512],
+        [2014, 193345359115],
+        [2015, 185992248190],
+        [2016, 176692129964],
+        [2017, 187135652658],
+        [2018, 203980108492],
+        [2019, 195503311311]]
+      }]
+    });
+
+
+  </script>
 
 </body>
 
