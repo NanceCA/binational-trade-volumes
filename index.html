@@ -223,7 +223,7 @@
             <tbody>
               <tr>
                 <td>Single Linear Regression</td>
-                <td>Displayed above to understand export and import patterns </td>
+                <td>Displayed below to understand export and import patterns </td>
                 <td>Both export and import data are linear in nature. Fitting these series on a linear regression model
                   can provide a general sense of the pattern. </td>
               </tr>
@@ -241,6 +241,9 @@
               </tr>
             </tbody>
           </table>
+          <div id="linearR" style="width:100%; height:400px;"></div>
+          <hr>
+          <div id="polynomialR" style="width:100%; height:400px;"></div>
         </div>
       </div>
     </div>
@@ -280,8 +283,6 @@
     </div>
     </div>
   </section>
-
-
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
@@ -572,6 +573,113 @@
       }]
     });
 
+    Highcharts.chart('linearR', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'Simple Linear Regression - Exports and Imports'
+      },
+      subtitle: {
+        text: 'US International Trade Commission'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Export Value ($)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'Import Value ($)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x} $, {point.y} $'
+          }
+        }
+      },
+      series: [{
+        name: 'US-MX Exports vs Imports (x,y)',
+        color: 'rgba(52, 240, 255, .5)',
+        data: [[72963189408, 54685865249],
+        [85872344740, 68393219447],
+        [94708666043, 75369300051],
+        [109706000000, 81380740167],
+        [131433000000, 83108095962],
+        [134732000000, 86076081837],
+        [135911000000, 90537433805],
+        [138073000000, 93017703250],
+        [155846000000, 100442000000],
+        [170198000000, 101667000000],
+        [176537000000, 105718000000],
+        [215915000000, 131507000000],
+        [262874000000, 159947000000],
+        [277594000000, 174833000000],
+        [280556000000, 181559000000],
+        [295730000000, 185992000000],
+        [296433000000, 187136000000],
+        [312809000000, 193345000000],
+        [358126000000, 195503000000]]
+
+      }, {
+        type: "line",
+        name: 'Regression Line',
+        color: 'rgba(120, 120, 120, .5)',
+        data: [[72963189408, 56766373231.066],
+        [85872344740, 63843103776.4908],
+        [94708666043, 68687128289.7847],
+        [109706000000, 76908587291.8583],
+        [131433000000, 88819213557.1805],
+        [134732000000, 90627707875.2777],
+        [135911000000, 91274029427.5773],
+        [138073000000, 92459226370.8105],
+        [155846000000, 102202290788.98],
+        [170198000000, 110069981135.549],
+        [176537000000, 113544987344.223],
+        [215915000000, 135131798274.212],
+        [262874000000, 160874473231.328],
+        [277594000000, 168943899227.809],
+        [280556000000, 170567651931.72],
+        [295730000000, 178885958322.386],
+        [296433000000, 179271339197.082],
+        [312809000000, 188248575618.168],
+        [358126000000, 213091114876.492]]
+      }]
+    });
 
   </script>
 
