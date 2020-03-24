@@ -42,6 +42,12 @@
             <a class="nav-link js-scroll-trigger" href="#contact">Models</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#insights">Insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#practitioner">Practitioner</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="https://github.com/NanceCA/binational-trade-volumes"
               target="_blank">GitHub
             </a>
@@ -59,40 +65,51 @@
       </div>
       <div class="container text-left">
         <h1>Understanding Binational Trade Volumes</h1>
-        <p class="lead">Using machine learning to explore trends in binational trade and travel between Mexico and the
-          United States.</p>
+        <p class="lead">Using machine learning to explore trends in binational trade and mobility between Mexico and the
+          US.</p>
         <p class="font-weight-light">A capstone project for the Deloitte Consulting Machine Learning Guild</p>
       </div>
     </div>
   </header>
 
+  <!-- Starting About Section Here -->
   <section id="about">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h2>About the project</h2>
           <p class="lead">International commerce can generate a variety of favorable social, economic, and political
-            externalities. In addition to the mutual economic gain, trade can also encourage a strengthened social and
+            externalities. In addition to mutual economic gain, trade can also encourage a strengthened social and
             political
             bilateral relationship between trading
             partners. </p>
           <p class="font-weight-normal">Recognizing that international trade can often also trigger unfavorable
             circumstances, this study
             will focus on better understanding and optimizing the favorable components of a binational commerce
-            relationship, moving forward under the assumption that the broader economic system will continue to be
+            relationship. This moves forward under the assumption that the broader economic system will continue to be
             globalized
-            and so finding ways to optimize the positive externalities is worthwhile for improved political, social and
+            and so finding ways to optimize the positive externalities is a worthwhile effort for improved political,
+            social and
             economic dynamics around the world. <br><br>
             Mexico and the United States make ideal selections for this study given
             the intricate historical trade relationship and the interwoven dynamic in the areas of culture, business and
-            politics.
+            politics. For comparative purposes, trade and mobility data is included for the US-Canadian relationship.
+            <br><br>
 
             This capstone project aims to answer the following key questions through exploratory data analysis, data
-            preprocessing and multiple linear regression.
+            preprocessing and regression.
           </p>
           <p class="lead"> What are we trying to understand?</p>
           <ul>
-            <li>Is there a relationship between mobility data and binational trade data? How can better understanding
+            <li>Trade volumes are often a way to quantify a bilateral relationship. If mobility between countries can be
+              a
+              catalyst for a strengthed bilateral relationship (and trade volumes an indicator of an existing
+              relationship), can key datapoints around trade volumes provide any
+              insight into mobility trends? In other words, is there a relationship between mobility data and binational
+              trade data? </li>
+            <li>Can insights in trade and mobility trends support the institutions that facilitate efficiency in both
+              areas? </li>
+            <li> How can better understanding
               the nuances in the trade data (aggregate import and export volumes) and mobility data provide greater
               insight into the results of binational commerce?
             </li>
@@ -120,10 +137,11 @@
                 <td><strong>Domestic Exports:</strong> Aggregate measure of goods grown, produced, or manufactured in
                   the
                   U.S. This
-                  includes commodities of foriegn origin that have been changed in the US<br>
+                  includes commodities of foreign origin that have been changed in the US<br>
                   <strong>FAS Export Value:</strong> The Free Alongside Ship value is the value of the exports at the
                   U.S. port based on the
-                  transaction price</td>
+                  transaction price<br>
+                  <Strong>Observances:</Strong> Aggregate value between 1996-2019</td>
               </tr>
               <tr>
                 <td>2) General Imports from Mexico to the US</td>
@@ -131,7 +149,8 @@
                 <td><strong>General Imports:</strong> The value of the total physical arrivals of merchandise from
                   foreign countries<br>
                   <strong>General Customs Value:</strong> The price actually paid or payable for the merchandise
-                  excluding U.S. import duties, freight, insurance and other charges</td>
+                  excluding U.S. import duties, freight, insurance and other charges<br>
+                  <Strong>Observances:</Strong> Aggregate value between 1996-2019</td>
               </tr>
               <tr>
                 <td>3) US-Mex Border Ports of Entry</td>
@@ -143,7 +162,9 @@
                   <strong>Measure:</strong> Describes the way in which the travel was conducted. There are 12 unique
                   values including: trucks, bus passengers, pedestrians<br>
                   <strong>Value:</strong> The recorded number of individuals who traveled through the port name via the
-                  measure</td>
+                  measure<br>
+                  <Strong>Observances:</Strong> 353,962 mobility records for US-MX and US-Can border between 1996-2019
+                </td>
               </tr>
             </tbody>
           </table>
@@ -161,6 +182,7 @@
     </div>
   </section>
 
+  <!-- Starting EDA Section Here -->
   <section id="services" class="bg-light">
     <div class="container">
       <div class="row">
@@ -181,17 +203,85 @@
     </div>
   </section>
 
+  <!-- Starting Models Section Here -->
   <section id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h2>Models</h2>
-          <p class="lead">Let's correlate the three variables using multiple linear regression to better understand the
+          <p class="lead">Let's correlate the three variables using multiple linear regression and polynomial regression
+            to better understand the
             nuances and extract value from the trends.</p>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Models</th>
+                <th>Variables</th>
+                <th>Reason</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Single Linear Regression</td>
+                <td>Displayed above to understand export and import patterns </td>
+                <td>Both export and import data are linear in nature. Fitting these series on a linear regression model
+                  can provide a general sense of the pattern. </td>
+              </tr>
+              <tr>
+                <td>Polynomial Regression</td>
+                <td>Relating import and mobility data aas well as export and mobility data.</td>
+                <td>Polynomial regression works on any size of dataset, and works great for nonlinear patterns. See
+                  visualization below to see the bias/variance tradeoff and the polynomial degree chosen for the model.
+                </td>
+              </tr>
+              <tr>
+                <td>TBD</td>
+                <td>TBD</td>
+                <td>TBD</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
+
+
+  <!-- Starting Insights Section Here -->
+  <section id="insights" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>Insights and Next Steps</h2>
+          <p class="lead">There's so much more to explore. This is the first step in trying to understand the quantified
+            relationship among countries in close proximity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Starting Practitioner Section Here -->
+  <section id="practitioner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2>About the Practitioner</h2>
+          <p class="lead">Why I find this work so important.</p>
+          <div class="card about">
+            <img class="card-img-top" src="./assets/headshot.jpg" alt="Headshot">
+            <div class="card-body">
+              <h5 class="card-title">Nancy Hinojos</h5>
+              <p class="card-text">Nancy is a Consultant in the Strategy & Analytics practice. Prior to joining Deloitte
+                Nancy was a Binational Business Fulbright Scholar in Mexico City. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
