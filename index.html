@@ -222,27 +222,45 @@
             </thead>
             <tbody>
               <tr>
-                <td>Single Linear Regression</td>
+                <td><strong>Single Linear Regression</strong></td>
                 <td>Displayed below to understand export and import trends over time, and get insight on the correlation
                   between the two variables. </td>
                 <td>Both export and import data are linear in nature. Fitting these series on a linear regression model
                   can provide a general sense of the pattern. </td>
               </tr>
               <tr>
-                <td>Polynomial Regression</td>
+                <td><strong>Polynomial Regression</strong></td>
                 <td>Relating import and mobility data as well as export and mobility data.</td>
                 <td>Polynomial regression works on any size of dataset, and works great for nonlinear patterns. See
                   visualization below to see the bias/variance tradeoff and the polynomial degree chosen for the model.
                 </td>
               </tr>
               <tr>
-                <td>TBD</td>
-                <td>TBD</td>
-                <td>TBD</td>
+                <td><strong>Multiple Linear Regression</strong></td>
+                <td>Relating import, export, and mobility data to make predictions based on patterns and leveraging
+                  backward elimination techniques to build the model.</td>
+                <td>Helpful to better understand the relationship between multiple variables.</td>
               </tr>
             </tbody>
           </table>
+          <hr>
           <div id="linearR" style="width:100%; height:400px;"></div>
+          <table class="table table-hover table-sm">
+            <thead class="thead-light">
+              <tr>
+                <th>Model</th>
+                <th>p-Value</th>
+                <th>Adjusted R-Squared</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Simple Linear Regression<br> <strong>Dependent Variable:</strong> Imports</td>
+                <td class="table-success text-center">~0.000 </td>
+                <td class="table-warning text-center">0.474 </td>
+              </tr>
+            </tbody>
+          </table>
           <hr>
           <div id="polynomialR" style="width:100%; height:400px;"></div>
           <hr>
@@ -251,7 +269,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Starting Insights Section Here -->
   <section id="insights" class="bg-light">
@@ -265,6 +282,7 @@
       </div>
     </div>
   </section>
+
   <!-- Starting Additional Comparative Insights Here -->
   <section id="extra" class="bg-dark">
     <div class="container">
