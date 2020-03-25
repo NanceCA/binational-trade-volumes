@@ -256,6 +256,7 @@
             <tbody>
               <tr>
                 <td>Simple Linear Regression<br> <strong>Dependent Variable:</strong> Imports</td>
+                <p> </p>
                 <td class="table-success text-center">~0.000 </td>
                 <td class="table-warning text-center">0.474 </td>
               </tr>
@@ -304,9 +305,9 @@
         <div class="col-lg-10 mx-auto">
           <h2>About the Practitioner</h2>
           <p class="lead">Why I find this work so important.</p>
-          <div class="card about">
-            <img class="card-img-top" src="./assets/headshot.jpg" alt="Headshot">
-            <div class="card-body">
+          <div class="card mx-auto">
+            <div class="card-body mx-auto">
+              <img class="card-img-top" src="./assets/headshot.jpg" alt="Headshot">
               <h5 class="card-title">Nancy Hinojos</h5>
               <p class="card-text">Nancy is a Consultant in the Strategy & Analytics practice. Prior to joining
                 Deloitte,
@@ -619,7 +620,7 @@
         zoomType: 'xy'
       },
       title: {
-        text: 'Simple Linear Regression - Exports & Imports'
+        text: 'Simple Linear Regression - Imports & Exports'
       },
       subtitle: {
         text: 'US International Trade Commission'
@@ -627,7 +628,7 @@
       xAxis: {
         title: {
           enabled: true,
-          text: 'Export Value ($)'
+          text: 'Import Value ($)'
         },
         startOnTick: true,
         endOnTick: true,
@@ -635,7 +636,7 @@
       },
       yAxis: {
         title: {
-          text: 'Import Value ($)'
+          text: 'Export Value ($)'
         }
       },
       legend: {
@@ -673,7 +674,7 @@
         }
       },
       series: [{
-        name: 'US-MX Exports & Imports (x,y)',
+        name: 'US-MX Imports & Exports (x,y)',
         color: 'rgba(52, 240, 255, .5)',
         data: [[72963189408, 54685865249],
         [85872344740, 68393219447],
