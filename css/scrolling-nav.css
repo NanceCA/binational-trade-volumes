@@ -70,3 +70,13 @@ section {
   }
 }
 
+.case{
+  color: #34f1ff;
+  font-size: 24px;
+}
+
+.icon{
+  height: 25px;
+  width: 25px;
+}
+

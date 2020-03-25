@@ -222,7 +222,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>Single Linear Regression</strong></td>
+                <td><strong>Simple Linear Regression</strong></td>
                 <td>Displayed below to understand export and import trends over time, and get insight on the correlation
                   between the two variables. </td>
                 <td>Both export and import data are linear in nature. Fitting these series on a linear regression model
@@ -244,24 +244,43 @@
             </tbody>
           </table>
           <hr>
-          <div id="linearR" style="width:100%; height:400px;"></div>
-          <table class="table table-hover table-sm">
-            <thead class="thead-light">
+          <div id="linearR" style="width:100%; height:400px;"></div><br>
+
+          <table>
+            <thead>
               <tr>
-                <th>Model</th>
-                <th>p-Value</th>
-                <th>Adjusted R-Squared</th>
+                <th class="case"><img class="icon" src="./assets/light.png" alt="icon">
+                  INSIGHTS
+                </th>
+            <tbody>
+              <tr>
+                <td> </td>
+              </tr>
+            </tbody>
+            </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th class=" align-middle">Model</th>
+                <th class="align-middle">p-Value</th>
+                <th class="align-middle">Adjusted R-Squared</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Simple Linear Regression<br> <strong>Dependent Variable:</strong> Imports</td>
-                <p> </p>
-                <td class="table-success text-center">~0.000 </td>
-                <td class="table-warning text-center">0.474 </td>
+                <td>The training set regression is displayed above. Conducting a simple linear regression on export
+                  and
+                  import data reveals that not only do both
+                  variables follow a positively sloped linear trend, the p-value listed suggests an existing a
+                  relationship (we reject the null hypothesis).
+                  We can move forward with the insight that trade volumes here may indicate a growing relationship
+                  between trading partners.</td>
+                <td class="table-success text-center align-middle">~0.000 </td>
+                <td class="table-warning text-center align-middle">0.474 </td>
               </tr>
             </tbody>
           </table>
+          <br>
           <hr>
           <div id="polynomialR" style="width:100%; height:400px;"></div>
           <hr>
@@ -901,7 +920,7 @@
       },
       series: [{
         name: 'US-MX Imports & Mobility (x,y)',
-        color: 'rgba(134, 242, 0, .5)',
+        color: 'rgba(52, 240, 255, .5)',
         data: [[72963189400, 276751448],
         [85872344700, 348661488],
         [94708666000, 366296614],
@@ -1018,8 +1037,9 @@
         }
       },
       series: [{
+        type: "line",
         name: 'US-Can Mobility (x,y)',
-        color: 'rgba(134, 242, 0, .5)',
+        color: 'rgba(253, 211, 0, .5)',
         data: [[1996, 153038903],
         [1997, 145512710],
         [1998, 142291790],
