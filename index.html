@@ -230,7 +230,7 @@
               </tr>
               <tr>
                 <td>Polynomial Regression</td>
-                <td>Relating import and mobility data aas well as export and mobility data.</td>
+                <td>Relating import and mobility data as well as export and mobility data.</td>
                 <td>Polynomial regression works on any size of dataset, and works great for nonlinear patterns. See
                   visualization below to see the bias/variance tradeoff and the polynomial degree chosen for the model.
                 </td>
@@ -245,6 +245,8 @@
           <div id="linearR" style="width:100%; height:400px;"></div>
           <hr>
           <div id="polynomialR" style="width:100%; height:400px;"></div>
+          <hr>
+          <div id="polynomialR2" style="width:100%; height:400px;"></div>
         </div>
       </div>
     </div>
@@ -263,9 +265,22 @@
       </div>
     </div>
   </section>
+  <!-- Starting Additional Comparative Insights Here -->
+  <section id="extra" class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h2 class="text-white">Additional Comparative Insights</h2>
+          <p class="lead text-white">Including US-Canada Mobility Data for Comparative Insights</p>
+          <div id="mx-can" style="width:100%; height:400px;"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
   <!-- Starting Practitioner Section Here -->
-  <section id="practitioner">
+  <section id="practitioner" class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
@@ -275,8 +290,14 @@
             <img class="card-img-top" src="./assets/headshot.jpg" alt="Headshot">
             <div class="card-body">
               <h5 class="card-title">Nancy Hinojos</h5>
-              <p class="card-text">Nancy is a Consultant in the Strategy & Analytics practice. Prior to joining Deloitte
-                Nancy was a Binational Business Fulbright Scholar in Mexico City. </p>
+              <p class="card-text">Nancy is a Consultant in the Strategy & Analytics practice. Prior to joining
+                Deloitte,
+                Nancy was a Binational Business Fulbright Scholar in Mexico City. Nancy has focused her career on
+                supporting both commercial and federal organizations quantify pressing business challenges that, if
+                better understand, can effect positive change. In her free time, she really enjoys coding and
+                thinking through how both data and storytelling can support a more comprehensive
+                understanding of large-scale social issues.
+              </p>
             </div>
           </div>
         </div>
@@ -635,7 +656,7 @@
       },
       series: [{
         name: 'US-MX Exports & Imports (x,y)',
-        color: 'rgba(253, 211, 0, .5)',
+        color: 'rgba(52, 240, 255, .5)',
         data: [[72963189408, 54685865249],
         [85872344740, 68393219447],
         [94708666043, 75369300051],
@@ -798,6 +819,243 @@
         [196000000000, 271323550]]
       }]
     });
+
+
+    Highcharts.chart('polynomialR2', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'Polynomial Regression - Imports & Mobility'
+      },
+      subtitle: {
+        text: 'US International Trade Commission & DOT'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Import Value ($)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'Mobility (ppl)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x} $, {point.y} $'
+          }
+        }
+      },
+      series: [{
+        name: 'US-MX Imports & Mobility (x,y)',
+        color: 'rgba(134, 242, 0, .5)',
+        data: [[72963189400, 276751448],
+        [85872344700, 348661488],
+        [94708666000, 366296614],
+        [110000000000, 391959396],
+        [136000000000, 392231869],
+        [131000000000, 362991511],
+        [135000000000, 352870123],
+        [138000000000, 343654239],
+        [156000000000, 343524676],
+        [170000000000, 336990567],
+        [198000000000, 327588026],
+        [211000000000, 310095754],
+        [216000000000, 295921230],
+        [177000000000, 264450245],
+        [230000000000, 242776894],
+        [263000000000, 225541089],
+        [278000000000, 232999664],
+        [281000000000, 243982227],
+        [296000000000, 254746277],
+        [296000000000, 267663436],
+        [294000000000, 273532405],
+        [313000000000, 278703002],
+        [346000000000, 283743197],
+        [358000000000, 275538145]]
+      }, {
+        type: "line",
+        name: 'Regression Line',
+        color: 'rgba(120, 120, 120, .5)',
+        data: [[72963189400, 347088645],
+        [85872344700, 346662229],
+        [94708666000, 346200719],
+        [110000000000, 344949478],
+        [136000000000, 340935414],
+        [131000000000, 341934191],
+        [135000000000, 341144930],
+        [138000000000, 340501276],
+        [156000000000, 335608407],
+        [170000000000, 330432687],
+        [198000000000, 316046581],
+        [211000000000, 307528799],
+        [216000000000, 303969150],
+        [177000000000, 327351630],
+        [230000000000, 293295578],
+        [263000000000, 266313233],
+        [278000000000, 255218376],
+        [281000000000, 253264394],
+        [296000000000, 245599989],
+        [296000000000, 245599989],
+        [294000000000, 246377548],
+        [313000000000, 243219827],
+        [346000000000, 272893179],
+        [358000000000, 301077272],
+        [358000000000, 301077272]]
+      }]
+    });
+
+    Highcharts.chart('mx-can', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'US-MX Mobility vs. US-Can Mobility'
+      },
+      subtitle: {
+        text: 'US Department of Transportation'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Year (Yr)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'Mobility (ppl)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x} yr, {point.y} ppl'
+          }
+        }
+      },
+      series: [{
+        name: 'US-Can Mobility (x,y)',
+        color: 'rgba(134, 242, 0, .5)',
+        data: [[1996, 153038903],
+        [1997, 145512710],
+        [1998, 142291790],
+        [1999, 146497328],
+        [2000, 147789673],
+        [2001, 130092391],
+        [2002, 122832695],
+        [2003, 112738414],
+        [2004, 114695622],
+        [2005, 113243701],
+        [2006, 112707996],
+        [2007, 107491421],
+        [2008, 103980803],
+        [2009, 95001517],
+        [2010, 101469642],
+        [2011, 106684911],
+        [2012, 111504252],
+        [2013, 112236211],
+        [2014, 108567839],
+        [2015, 97556562],
+        [2016, 93951778],
+        [2017, 94268274],
+        [2018, 95414333],
+        [2019, 94662104]]
+      }, {
+        type: "line",
+        name: 'US-Mex Mobility',
+        color: 'rgba(120, 120, 120, .5)',
+        data: [[1996, 276751448],
+        [1997, 348661488],
+        [1998, 366296614],
+        [1999, 391959396],
+        [2000, 392231869],
+        [2001, 362991511],
+        [2002, 352870123],
+        [2003, 343654239],
+        [2004, 343524676],
+        [2005, 336990567],
+        [2006, 327588026],
+        [2007, 310095754],
+        [2008, 295921230],
+        [2009, 264450245],
+        [2010, 242776894],
+        [2011, 225541089],
+        [2012, 232999664],
+        [2013, 243982227],
+        [2014, 254746277],
+        [2015, 267663436],
+        [2016, 273532405],
+        [2017, 278703002],
+        [2018, 283743197],
+        [2019, 275538145]]
+      }]
+    });
+
 
   </script>
 
