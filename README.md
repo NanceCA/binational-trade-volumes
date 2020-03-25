@@ -15,6 +15,7 @@ Leveraging EDA and machine learning algorithims on this data can help provide gr
 **General Imports from Mexico to the United States over time in (billions)**
 
 ![image](https://user-images.githubusercontent.com/48306129/72568970-20702580-386e-11ea-81f8-0b0fccdc2e48.png)
+![](gif.gif)
 
 By quantifying US/MX trade and US/MX mobility data, I attempt to understand if these are two indicators of the current state of the MS/US relationship. Using a Random Forests algorithim, can further explore the granuality of trade and mobility trends. 
 
