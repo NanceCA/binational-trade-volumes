@@ -223,7 +223,8 @@
             <tbody>
               <tr>
                 <td>Single Linear Regression</td>
-                <td>Displayed below to understand export and import patterns </td>
+                <td>Displayed below to understand export and import trends over time, and get insight on the correlation
+                  between the two variables. </td>
                 <td>Both export and import data are linear in nature. Fitting these series on a linear regression model
                   can provide a general sense of the pattern. </td>
               </tr>
@@ -579,7 +580,7 @@
         zoomType: 'xy'
       },
       title: {
-        text: 'Simple Linear Regression - Exports and Imports'
+        text: 'Simple Linear Regression - Exports & Imports'
       },
       subtitle: {
         text: 'US International Trade Commission'
@@ -633,8 +634,8 @@
         }
       },
       series: [{
-        name: 'US-MX Exports vs Imports (x,y)',
-        color: 'rgba(52, 240, 255, .5)',
+        name: 'US-MX Exports & Imports (x,y)',
+        color: 'rgba(253, 211, 0, .5)',
         data: [[72963189408, 54685865249],
         [85872344740, 68393219447],
         [94708666043, 75369300051],
@@ -678,6 +679,123 @@
         [296433000000, 179271339197.082],
         [312809000000, 188248575618.168],
         [358126000000, 213091114876.492]]
+      }]
+    });
+
+    Highcharts.chart('polynomialR', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'Polynomial Regression - Exports & Mobility'
+      },
+      subtitle: {
+        text: 'US International Trade Commission & DOT'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Export Value ($)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'Mobility (ppl)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x} $, {point.y} $'
+          }
+        }
+      },
+      series: [{
+        name: 'US-MX Exports & Mobility (x,y)',
+        color: 'rgba(134, 242, 0, .5)',
+        data: [[54685865249.0, 276751448],
+        [68393219447.0, 348661488],
+        [75369300051.0, 366296614],
+        [81380740167.0, 391959396],
+        [100000000000.0, 392231869],
+        [90537433805.0, 362991511],
+        [86076081837.0, 352870123],
+        [83108095962.0, 343654239],
+        [93017703250.0, 343524676],
+        [102000000000.0, 336990567],
+        [115000000000.0, 327588026],
+        [119000000000.0, 310095754],
+        [132000000000.0, 295921230],
+        [106000000000.0, 264450245],
+        [132000000000.0, 242776894],
+        [160000000000.0, 225541089],
+        [175000000000.0, 232999664],
+        [182000000000.0, 243982227],
+        [193000000000.0, 254746277],
+        [186000000000.0, 267663436],
+        [177000000000.0, 273532405],
+        [187000000000.0, 278703002],
+        [204000000000.0, 283743197],
+        [196000000000.0, 275538145]]
+      }, {
+        type: "line",
+        name: 'Regression Line',
+        color: 'rgba(120, 120, 120, .5)',
+        data: [[54685865200, 360233718],
+        [68393219400, 354919718],
+        [75369300100, 351025369],
+        [81380740200, 346953844],
+        [100000000000, 329953373],
+        [90537433800, 339422483],
+        [86076081800, 343294424],
+        [83108096000, 345656988],
+        [93017703200, 337103886],
+        [102000000000, 327741221],
+        [115000000000, 311784683],
+        [119000000000, 306416598],
+        [132000000000, 288170208],
+        [106000000000, 323110102],
+        [132000000000, 288170208],
+        [160000000000, 253707168],
+        [175000000000, 247333949],
+        [182000000000, 250029862],
+        [193000000000, 264651056],
+        [186000000000, 253716243],
+        [177000000000, 247660866],
+        [187000000000, 254912471],
+        [204000000000, 295921534],
+        [196000000000, 271323550]]
       }]
     });
 
