@@ -196,10 +196,109 @@
       </div>
       <hr>
       <div id="containerImports" style="width:100%; height:400px;"></div>
+      <table>
+        <thead>
+          <tr>
+            <th class="case"><img class="icon" src="./assets/light.png" alt="icon">
+              INSIGHTS
+            </th>
+          </tr>
+        </thead>
+      </table>
+      <table class="table table-hover table-sm">
+        <thead>
+          <tr>
+            <th class=" align-middle">Descriptive Statistics</th>
+            <th class="align-middle">Unique Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mean:</strong> $207,772,700,000 <br> <strong>Standard Deviation:</strong>$86,326,680,000 <br>
+              <strong>Max: </strong> $358,000,000,000.00
+              <br> <strong>Min:</strong> $72,963,190,000.00
+            </td>
+            <td class="align-middle">24 unique aggregate Customs Value import items </td>
+          </tr>
+        </tbody>
+      </table>
       <hr>
       <div id="containerExports" style="width:100%; height:400px;"></div>
+      <table>
+        <thead>
+          <tr>
+            <th class="case"><img class="icon" src="./assets/light.png" alt="icon">
+              INSIGHTS
+            </th>
+          </tr>
+        </thead>
+      </table>
+      <table class="table table-hover table-sm">
+        <thead>
+          <tr>
+            <th class=" align-middle">Descriptive Statistics</th>
+            <th class="align-middle">Unique Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mean:</strong> $129,027,100,000.00
+              <br> <strong>Standard Deviation:</strong> $47,726,710,000.00
+              <br>
+              <strong>Max: </strong> $203,980,000,000.00
+              <br> <strong>Min:</strong> $54,685,870,000.00
+            </td>
+            <td class="align-middle">24 unique aggregate FAS Value export items </td>
+          </tr>
+        </tbody>
+      </table>
       <hr>
       <div id="containerTravel" style="width:100%; height:400px;"></div>
+      <table>
+        <thead>
+          <tr>
+            <th class="case"><img class="icon" src="./assets/light.png" alt="icon">
+              INSIGHTS
+            </th>
+          </tr>
+        </thead>
+      </table>
+      <table class="table table-hover table-sm">
+        <thead>
+          <tr>
+            <th class=" align-middle">Descriptive Statistics</th>
+            <th class="align-middle">Unique Values</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mean:</strong> 88,630
+              <br> <strong>Standard Deviation:</strong> 283,366
+              <br>
+              <strong>Max: </strong> 4,447,374
+              <br> <strong>Min:</strong> 0
+            </td>
+            <td class="align-middle"> 82,288 aggregate values for mobility (# of travelers)<br>
+              <strong>Ports of Entry:</strong> 27 different border ports of entry<br>
+              <strong>Measures:</strong> 12 different measures
+          </tr>
+          <table>
+            <thead>
+              <tr>
+                <td>The above describes an adjusted data frame that displays only observances for the US-MX
+                  boder. Measures capture commercial and non-commercial mobility. Measures include: [Bus Passengers,
+                  Buses,
+                  Pedestrians,
+                  Personal Vehicle Passengers, Personal Vehicles,
+                  Rail Containers Empty, Rail Containers Full,
+                  Train Passengers, Trains, Truck Containers Empty,
+                  Truck Containers Full, Trucks]
+                <td>
+              </tr>
+            </thead>
+          </table>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -283,8 +382,78 @@
           <br>
           <hr>
           <div id="polynomialR" style="width:100%; height:400px;"></div>
+
+          <table>
+            <thead>
+              <tr>
+                <th class="case"><img class="icon" src="./assets/light.png" alt="icon">
+                  INSIGHTS
+                </th>
+            <tbody>
+              <tr>
+                <td> </td>
+              </tr>
+            </tbody>
+            </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th class=" align-middle">Model</th>
+                <th class="align-middle">p-Value</th>
+                <th class="align-middle">Adjusted R-Squared</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The training set regression is displayed above. Conducting a simple linear regression on export
+                  and
+                  import data reveals that not only do both
+                  variables follow a positively sloped linear trend, the p-value listed suggests an existing a
+                  relationship (we reject the null hypothesis).
+                  We can move forward with the insight that trade volumes here may indicate a growing relationship
+                  between trading partners.</td>
+                <td class="table-success text-center align-middle">~0.000 </td>
+                <td class="table-warning text-center align-middle">0.474 </td>
+              </tr>
+            </tbody>
+          </table>
           <hr>
           <div id="polynomialR2" style="width:100%; height:400px;"></div>
+
+          <table>
+            <thead>
+              <tr>
+                <th class="case"><img class="icon" src="./assets/light.png" alt="icon">
+                  INSIGHTS
+                </th>
+            <tbody>
+              <tr>
+                <td> </td>
+              </tr>
+            </tbody>
+            </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th class=" align-middle">Model</th>
+                <th class="align-middle">p-Value</th>
+                <th class="align-middle">Adjusted R-Squared</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The training set regression is displayed above. Conducting a simple linear regression on export
+                  and
+                  import data reveals that not only do both
+                  variables follow a positively sloped linear trend, the p-value listed suggests an existing a
+                  relationship (we reject the null hypothesis).
+                  We can move forward with the insight that trade volumes here may indicate a growing relationship
+                  between trading partners.</td>
+                <td class="table-success text-center align-middle">~0.000 </td>
+                <td class="table-warning text-center align-middle">0.474 </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -311,6 +480,8 @@
           <h2 class="text-white">Additional Comparative Insights</h2>
           <p class="lead text-white">Including US-Canada Mobility Data for Comparative Insights</p>
           <div id="mx-can" style="width:100%; height:400px;"></div>
+          <hr>
+          <div id="imports-mx-can" style="width:100%; height:400px;"></div>
         </div>
       </div>
     </div>
@@ -1039,7 +1210,7 @@
       series: [{
         type: "line",
         name: 'US-Can Mobility (x,y)',
-        color: 'rgba(253, 211, 0, .5)',
+        color: 'rgba(120, 120, 120, .5)',
         data: [[1996, 153038903],
         [1997, 145512710],
         [1998, 142291790],
@@ -1067,7 +1238,7 @@
       }, {
         type: "line",
         name: 'US-Mex Mobility',
-        color: 'rgba(120, 120, 120, .5)',
+        color: 'rgba(253, 211, 0, .5)',
         data: [[1996, 276751448],
         [1997, 348661488],
         [1998, 366296614],
@@ -1092,6 +1263,125 @@
         [2017, 278703002],
         [2018, 283743197],
         [2019, 275538145]]
+      }]
+    });
+
+
+    Highcharts.chart('imports-mx-can', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'US-MX Imports vs. US-Can Imports'
+      },
+      subtitle: {
+        text: 'Data source:USITC'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Year (Yr)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'Customs Value ($)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x} yr, {point.y} ppl'
+          }
+        }
+      },
+      series: [{
+        type: "line",
+        name: 'US-Can Imports (x,y)',
+        color: 'rgba(120, 120, 120, .5)',
+        data: [[1996, 156298602322],
+        [1997, 167881009768],
+        [1998, 174685458576],
+        [1999, 198242385897],
+        [2000, 229059928803],
+        [2001, 216836195908],
+        [2002, 210517903533],
+        [2003, 224016104274],
+        [2004, 255660078909],
+        [2005, 287533544304],
+        [2006, 303033956257],
+        [2007, 312504523855],
+        [2008, 334839564384],
+        [2009, 224584073363],
+        [2010, 276679388727],
+        [2011, 315234556631],
+        [2012, 323925537339],
+        [2013, 332900321590],
+        [2014, 348500921085],
+        [2015, 296061884232],
+        [2016, 277577453217],
+        [2017, 298162125030],
+        [2018, 319083464690],
+        [2019, 319602228209]]
+      }, {
+        type: "line",
+        name: 'US-MX Imports',
+        color: 'rgba(52, 240, 255, .5)',
+        data: [[1996, 72963189408],
+        [1997, 85872344740],
+        [1998, 94708666043],
+        [1999, 110000000000],
+        [2000, 136000000000],
+        [2001, 131000000000],
+        [2002, 135000000000],
+        [2003, 138000000000],
+        [2004, 156000000000],
+        [2005, 170000000000],
+        [2006, 198000000000],
+        [2007, 211000000000],
+        [2008, 216000000000],
+        [2009, 177000000000],
+        [2010, 230000000000],
+        [2011, 263000000000],
+        [2012, 278000000000],
+        [2013, 281000000000],
+        [2014, 296000000000],
+        [2015, 296000000000],
+        [2016, 294000000000],
+        [2017, 313000000000],
+        [2018, 346000000000],
+        [2019, 358000000000]]
       }]
     });
 
