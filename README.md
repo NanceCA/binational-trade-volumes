@@ -1,5 +1,5 @@
 # Exploring Binational Trade Volumes & Mobilitiy Between Mexico and the United States
-*Leveraging Exploratory Data Analysis (EDA) and regression to extract insights on the binational relationship between Mexico and the United States.*
+*Leveraging Exploratory Data Analysis (EDA) and regression to extract insights on the binational relationship between Mexico and the United States. Link to hosted site is [here](https://nanceca.github.io/binational-trade-volumes/).*
 
 ## Why explore binational trade and mobility volumes between Mexico and the United States?
 
@@ -25,7 +25,7 @@ By quantifying US/MX trade and US/MX mobility data, I attempt to understand if t
  ### The Study Methodology, Visualizations are now hosted
  _See below for a preview of a the application_
 
- Click **here** to learn more.
+ Click [**here**](https://nanceca.github.io/binational-trade-volumes/) to learn more.
  ![](./assets/gif.gif)
 
 ## Key datasets
