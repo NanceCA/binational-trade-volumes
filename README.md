@@ -3,7 +3,7 @@
 
 ## Why explore binational trade and mobility volumes between Mexico and the United States?
 
-Trade is an integral part of the relationship between Mexico and the United States, and as shown by the chart below, sourced with data from the US International Trade Commission, commerce between Mexico and the US has been increasing over time.
+Trade is an integral part of the relationship between Mexico and the United States, and as shown by the chart below, sourced with data from the US International Trade Commission, commerce between Mexico and the US has increased over time.
 
 Mobility is a also a key quantitative indicator that can provide more information about a bilateral relationship.Leveraging EDA and machine learning algorithims on trade and mobility data can help provide greater insight into understanding if increased trade also catalyzes increased movement of people between both countries, as an indicator of a growing MX-US relationship. This claim depends on two key hypothesis:
 
@@ -29,7 +29,7 @@ By quantifying US/MX trade and US/MX mobility data, I attempt to understand if t
  ![](./assets/gif.gif)
 
 ## Key datasets
-The US International Trade Commission has publically accessible data to review trade volumes in depth. THe US International Trade Commission datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
+The US International Trade Commission has publically accessible data to review trade volumes in depth. The US International Trade Commission datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
 
 World Trade Organization (WTO) data is also included in the respository. Data on mobility is sourced from the U.S Department of Transportation. 
 
