@@ -17,7 +17,8 @@ Mobility is a also a key quantitative indicator that can provide more informatio
 *Source: USITC* -
 *Find these visualizations among others in the Jupyter Notebooks above*
 
-![image](https://user-images.githubusercontent.com/48306129/77597843-53ade100-6ebd-11ea-8e6b-b54ecbf8dd2b.png)
+![image](https://user-images.githubusercontent.com/48306129/77599615-8c03ee00-6ec2-11ea-8821-c78e2a32f8db.png)
+
 
 
 By quantifying US/MX trade and US/MX mobility data, I attempt to understand if these are two indicators of the emerging state of the MS/US relationship (not necessarily current state in order to leverage trends over time). Both simple linear regression and polynomial regression analyses, can further explore the granuality of trade and mobility trends. 
