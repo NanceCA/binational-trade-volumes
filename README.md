@@ -1,37 +1,37 @@
-# Exploring Binational Trade Volumes
-leveraging exploratory data analysis and machine learning algorithms to extract insights on the binational trade relationship between Mexico and the United States
+# Exploring Binational Trade Volumes & Mobilitiy Between Mexico and the United States
+*Leveraging Exploratory Data Analysis (EDA) and regression to extract insights on the binational relationship between Mexico and the United States.*
 
-## Why explore binational trade volumes between Mexico and the United States?
+## Why explore binational trade and mobility volumes between Mexico and the United States?
 
-Trade is an integral part of the relationship between Mexico and the United States and as shown by the chart below, sourced with data from the US International Trade Commission, general Imports from Mexico to the US have been increasing over time.
+Trade is an integral part of the relationship between Mexico and the United States, and as shown by the chart below, sourced with data from the US International Trade Commission, commerce between Mexico and the US has been increasing over time.
 
-Leveraging EDA and machine learning algorithims on this data can help provide greater insight into understanding if increased trade also catalyzes increased movement of people between both countries, as an indicator of a growing MX-US relationship. This claim depends on two key hypothesis:
+Mobility is a also a key quantitative indicator that can provide more information about a bilateral relationship.Leveraging EDA and machine learning algorithims on trade and mobility data can help provide greater insight into understanding if increased trade also catalyzes increased movement of people between both countries, as an indicator of a growing MX-US relationship. This claim depends on two key hypothesis:
 
-1. Movement between two countries, whether that is tourism, permanent residency, or temporary residency can increase mutual binational understanding from a social and cultural perspective 
+1. Movement between two countries, whether that is tourism, permanent residency, temporary residency or commercial travel can increase mutual binational understanding from a social and cultural perspective 
     1. A key reason to bring in mobility data!
-1. Increased trade between two economies can cause both parties to experience mutual economic gain thereby incentiving both countries to continue trading
-    1. Recognizing that it is important to take a look at the industry impact
+1. Increased trade between two economies can cause both parties to experience mutual economic gain thereby incentiving both countries to continue trading.
+    1. Trade is also an indicator of an existing bilateral relationship
+1. If trade catalyzes economic benefits, and mobility may strenthen social and political ties, can one encourage the other?
 
-**General Imports from Mexico to the United States over time in (billions)**
+**US-MX Imports and Exports over time in (billions)**
+*Source: USITC*
+*Find these visualizations among others in the Jupyter Notebooks above*
 
-![image](https://user-images.githubusercontent.com/48306129/72568970-20702580-386e-11ea-81f8-0b0fccdc2e48.png)
-![](gif.gif)
+![image](https://user-images.githubusercontent.com/48306129/77597843-53ade100-6ebd-11ea-8e6b-b54ecbf8dd2b.png)
 
-By quantifying US/MX trade and US/MX mobility data, I attempt to understand if these are two indicators of the current state of the MS/US relationship. Using a Random Forests algorithim, can further explore the granuality of trade and mobility trends. 
 
-Subquestions this exploration pursues includes the following:
+By quantifying US/MX trade and US/MX mobility data, I attempt to understand if these are two indicators of the emerging state of the MS/US relationship (not necessarily current state in order to leverage trends over time). Both simple linear regression and polynomial regression analyses, can further explore the granuality of trade and mobility trends. 
 
-Field | Additional Project Question
------------- | -------------
-Trade | Though trade volume has increased, how have specific commodities changed over time?
-Economic Gain | Where do the economic benefits go?
-Binational Environment | For lower peaks in trade volumes, what political, social, or economic dynamics were occurring at the time?
+ ### The Study Methodology, Visualizations are now hosted
+ _See below for a preview of a the application_
 
+ Click **here** to learn more.
+ ![](./assets/gif.gif)
 
 ## Key datasets
-The US Internnational Trade Commission has publically accessible data to review trade volumes in depth. THe US International Trade Commission leverages datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
+The US International Trade Commission has publically accessible data to review trade volumes in depth. THe US International Trade Commission datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
 
-World Trade Organization (WTO) data is also included in the respository.
+World Trade Organization (WTO) data is also included in the respository. Data on mobility is sourced from the U.S Department of Transportation. 
 
 See some of the queries of interest that I've pursued below:
 
@@ -41,7 +41,7 @@ See some of the queries of interest that I've pursued below:
 ```
     Trade Flow: Total Exports
     Classification System: HTS (Harmonized Tariff Schedule) Items
-    Years to Report: 1997 - 2018 (Current)
+    Years to Report: 1997 - 2019 (Current)
     Countries: Mexico `
  ```
 
@@ -51,7 +51,7 @@ See some of the queries of interest that I've pursued below:
  ```
     Trade Flow: Imports for Consumption
     Classification System: HTS (Harmonized Tariff Schedule) Items
-    Years to Report: 1997 - 2018 (Current)
+    Years to Report: 1997 - 2019 (Current)
     Countries: Mexico `
  ```
   
@@ -63,16 +63,3 @@ See some of the queries of interest that I've pursued below:
     Years to Report: 1997 - 2018 (Current)
     Countries: Mexico `
  ```
-
- ### Leveraging a Random Forest Algorithim to understand the relationship between binational trade and tourism 
-
- _What are random forests?_
-
- A random forest is one of many supervised learning algorithims that is leveraged to predict an outcome. It can be either a regression or a classification depending on the type of data, continuous or categorical, respectively.
-
- Random forests are composed of decision tree models.
-
- #### Why Random Forests to understand trade volumes?
-
- Trade volumes correlated with another variable can provide insight into key indicators that may describe a binational relationship.   
-
