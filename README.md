@@ -5,16 +5,16 @@
 
 Trade is an integral part of the relationship between Mexico and the United States, and as shown by the chart below, sourced with data from the US International Trade Commission, commerce between Mexico and the US has increased over time.
 
-Mobility is a also a key quantitative indicator that can provide more information about a bilateral relationship.Leveraging EDA and machine learning algorithims on trade and mobility data can help provide greater insight into understanding if increased trade also catalyzes increased movement of people between both countries, as an indicator of a growing MX-US relationship. This claim depends on two key hypothesis:
+Mobility is a also a key quantitative indicator that can provide more information about a bilateral relationship. Leveraging EDA and machine learning algorithims on trade and mobility data can help provide greater insight into understanding if increased trade also catalyzes increased movement of people between both countries, as an indicator of a growing MX-US relationship. This claim depends on two key hypothesis and one exploratory question:
 
 1. Movement between two countries, whether that is tourism, permanent residency, temporary residency or commercial travel can increase mutual binational understanding from a social and cultural perspective 
     1. A key reason to bring in mobility data!
-1. Increased trade between two economies can cause both parties to experience mutual economic gain thereby incentiving both countries to continue trading.
+1. Increased trade between two economies can cause both parties to experience mutual economic gain thereby incentiving both countries to continue trading
     1. Trade is also an indicator of an existing bilateral relationship
-1. If trade catalyzes economic benefits, and mobility may strenthen social and political ties, can one encourage the other?
+1. If trade catalyzes economic benefits, and mobility may strengthen social and political ties, can one encourage the other?
 
 **US-MX Imports and Exports over time in (billions)**
-*Source: USITC*
+*Source: USITC* -
 *Find these visualizations among others in the Jupyter Notebooks above*
 
 ![image](https://user-images.githubusercontent.com/48306129/77597843-53ade100-6ebd-11ea-8e6b-b54ecbf8dd2b.png)
@@ -29,11 +29,11 @@ By quantifying US/MX trade and US/MX mobility data, I attempt to understand if t
  ![](./assets/gif.gif)
 
 ## Key datasets
-The US International Trade Commission has publically accessible data to review trade volumes in depth. The US International Trade Commission datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
+The US International Trade Commission has publically accessible data to review trade volumes in depth. The datasets included in this repository are specific to import and export transactions between Mexico and the United States. 
 
 World Trade Organization (WTO) data is also included in the respository. Data on mobility is sourced from the U.S Department of Transportation. 
 
-See some of the queries of interest that I've pursued below:
+See some of the queries of interest that I've pursued below. All data can be found in the dat directory of this repository.
 
 ### US International Trade Commission
 
