@@ -479,9 +479,11 @@
         <div class="col-lg-10 mx-auto">
           <h2 class="text-white">Additional Comparative Insights</h2>
           <p class="lead text-white">Including US-Canada Mobility Data for Comparative Insights</p>
-          <div id="mx-can" style="width:100%; height:400px;"></div>
-          <hr>
           <div id="imports-mx-can" style="width:100%; height:400px;"></div>
+          <hr>
+          <div id="exports-mx-can" style="width:100%; height:400px;"></div>
+          <hr>
+          <div id="mx-can" style="width:100%; height:400px;"></div>
         </div>
       </div>
     </div>
@@ -545,7 +547,7 @@
         text: 'General Imports from Mexico to the United States (1996-2019)'
       },
       subtitle: {
-        text: 'Source: United States International Trade Commission (USITC)'
+        text: 'Data source: United States International Trade Commission (USITC)'
       },
       xAxis: {
         title: {
@@ -634,7 +636,7 @@
         text: 'General Exports the United States to Mexico (1996-2019)'
       },
       subtitle: {
-        text: 'Source: United States International Trade Commission (USITC)'
+        text: 'Data source: United States International Trade Commission (USITC)'
       },
       xAxis: {
         title: {
@@ -724,7 +726,7 @@
         text: 'Mobility Through US-Mexico Border Ports of Entry (1996-2019)'
       },
       subtitle: {
-        text: 'Source: U.S. Department of Transportation(DOT)'
+        text: 'Data Source: U.S. Department of Transportation(DOT)'
       },
       xAxis: {
         title: {
@@ -813,7 +815,7 @@
         text: 'Simple Linear Regression - Imports & Exports'
       },
       subtitle: {
-        text: 'US International Trade Commission'
+        text: 'Data source: US International Trade Commission'
       },
       xAxis: {
         title: {
@@ -921,7 +923,7 @@
         text: 'Polynomial Regression - Exports & Mobility'
       },
       subtitle: {
-        text: 'US International Trade Commission & DOT'
+        text: 'Data source: US International Trade Commission & DOT'
       },
       xAxis: {
         title: {
@@ -1039,7 +1041,7 @@
         text: 'Polynomial Regression - Imports & Mobility'
       },
       subtitle: {
-        text: 'US International Trade Commission & DOT'
+        text: 'Data source: US International Trade Commission & DOT'
       },
       xAxis: {
         title: {
@@ -1157,7 +1159,7 @@
         text: 'US-MX Mobility vs. US-Can Mobility'
       },
       subtitle: {
-        text: 'US Department of Transportation'
+        text: 'Data source: US Department of Transportation'
       },
       xAxis: {
         title: {
@@ -1385,6 +1387,123 @@
       }]
     });
 
+    Highcharts.chart('exports-mx-can', {
+      chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+      },
+      title: {
+        text: 'US-MX Exports vs. US-Can Exports'
+      },
+      subtitle: {
+        text: 'Data source:USITC'
+      },
+      xAxis: {
+        title: {
+          enabled: true,
+          text: 'Year (Yr)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+      },
+      yAxis: {
+        title: {
+          text: 'FAS Value ($)'
+        }
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+        borderWidth: 1
+      },
+      plotOptions: {
+        scatter: {
+          marker: {
+            radius: 5,
+            states: {
+              hover: {
+                enabled: true,
+                lineColor: 'rgb(100,100,100)'
+              }
+            }
+          },
+          states: {
+            hover: {
+              marker: {
+                enabled: false
+              }
+            }
+          },
+          tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: '{point.x} yr, {point.y} ppl'
+          }
+        }
+      },
+      series: [{
+        type: "line",
+        name: 'US-Can Exports (x,y)',
+        color: 'rgba(120, 120, 120, .5)',
+        data: [[1996, 119122843150],
+        [1997, 134793605634],
+        [1998, 137767796019],
+        [1999, 145731429750],
+        [2000, 155600809962],
+        [2001, 144620744666],
+        [2002, 142543103007],
+        [2003, 148748606255],
+        [2004, 163167889147],
+        [2005, 183234877485],
+        [2006, 198226442866],
+        [2007, 213118723569],
+        [2008, 222424387773],
+        [2009, 171695231339],
+        [2010, 206802613678],
+        [2011, 234101703669],
+        [2012, 244714519756],
+        [2013, 251802094219],
+        [2014, 263462830131],
+        [2015, 234106287244],
+        [2016, 221015402193],
+        [2017, 233922159566],
+        [2018, 247746470065],
+        [2019, 241387010897]]
+      }, {
+        type: "line",
+        name: 'US-MX Exports',
+        color: 'rgba(134, 242, 0, .5)',
+        data: [[1996, 54685865249],
+        [1997, 68393219447],
+        [1998, 75369300051],
+        [1999, 81380740167],
+        [2000, 100442000000],
+        [2001, 90537433805],
+        [2002, 86076081837],
+        [2003, 83108095962],
+        [2004, 93017703250],
+        [2005, 101667000000],
+        [2006, 114562000000],
+        [2007, 119381000000],
+        [2008, 131507000000],
+        [2009, 105718000000],
+        [2010, 131818000000],
+        [2011, 159947000000],
+        [2012, 174833000000],
+        [2013, 181559000000],
+        [2014, 193345000000],
+        [2015, 185992000000],
+        [2016, 176692000000],
+        [2017, 187136000000],
+        [2018, 203980000000],
+        [2019, 195503000000]]
+      }]
+    });
 
   </script>
 
