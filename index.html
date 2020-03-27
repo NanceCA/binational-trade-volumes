@@ -108,7 +108,7 @@
               insight into mobility trends? In other words, is there a relationship between mobility data and binational
               trade data? </li>
             <li>Can insights in trade and mobility trends support the institutions that facilitate efficiency in both
-              areas? </li>
+              areas? Let's take California ports of entry as a use case. </li>
             <li> How can better understanding
               the nuances in the trade data (aggregate import and export volumes) and mobility data provide greater
               insight into the results of binational commerce?
@@ -335,10 +335,12 @@
                 </td>
               </tr>
               <tr>
-                <td><strong>Multiple Linear Regression</strong></td>
-                <td>Relating import, export, and mobility data to make predictions based on patterns and leveraging
-                  backward elimination techniques to build the model.</td>
-                <td>Helpful to better understand the relationship between multiple variables.</td>
+                <td><strong>Naive Bayes and Logistic Regression</strong></td>
+                <td>Relating import, export, and port of entry data to make predictions on which California ports of
+                  entry may experience higher mobility volumes to help them build efficiencies in facilitating travel.
+                </td>
+                <td>Helpful to make the business case more concrete, by helping identify which ports of entry can
+                  facilitate mobility and trade.</td>
               </tr>
             </tbody>
           </table>
@@ -452,8 +454,29 @@
             </tbody>
           </table>
           <hr>
-          <h2>Multivariate Regression Model</h2>
-          <p>Insights coming soon.</p>
+          <h2>Naive Bayes</h2>
+          <p>Plotting Mobility by Port Code to understand which mobility observances are more likely to travel through
+            California ports of entry.</p>
+          <br>
+          <div class="card" style="width: 100%;">
+            <img src="./assets/model.png" class="card-img-left" alt="naive-bayes">
+            <div class="card-body">
+              <h5 class="card-title">Identifying the Ports of Entry in CA</h5>
+              <p class="card-text">The boolean value represents whether or not a mobility observance happened to be
+                through a California port of entry. Running a Naive Bayes model including the Port Code and Mobility
+                enables us to predict which port codes may experience higher travel transactions (commercial and
+                non-commercial) as mobility rises. Equipped with this information ports of entry can cater to the final
+                user and dedicate resources to desgin for efficiencyies. </p>
+              <a href="https://github.com/NanceCA/binational-trade-volumes/tree/master/jupyter-notebook"
+                class="btn btn-dark" target="_blank">See the Jupyter Notebook</a>
+            </div>
+          </div>
+          <p> Additional Naive Bayes and Logistic Regression models were conducted to predict the specific measure (or
+            means of transportation) for binational mobility. This included commercial and non-commercial measures. The
+            top measures were Pedestrian travel and Commercial Truck travel. The model visualizations can be found on
+            the Jupyter Notebook. No significant trends were identified to pursue insights on a specific port code. More
+            granularity on each of the measures is needed.
+          </p>
         </div>
       </div>
     </div>
@@ -479,7 +502,8 @@
               regression, it is clear that other factors (many of them may be social and political) influence mobility
               aside from just trade volumes. An interesting comparison emerges from taking a look at the US-Canadian
               trade data which shows 1) similar trade data trends compared to that of
-              US-MS but 2) the mobility patterns are different. This may further showcase that
+              US-MS but 2) the mobility patterns are more consistent.This may further showcase how other factors
+              influence (inhibit or enable) mobility as well.
 
             </li>
 
@@ -489,7 +513,7 @@
               areas?<br><br> A: Yes! The Naive Bayes model reveals how likely it is that mobility is focused in
               California ports of entry according to select features. Chambers of Commerce, local and federal
               government, as well as private sector actors that depend on trade can leverage these data points to cater
-              efficiency and an improved user experience to port of entries in California.
+              efficiency and an improved user experience to busy port of entries in California.
             </li>
 
             <li class="list-group-item d-flex align-items-center list-group-item-action">
@@ -523,7 +547,7 @@
             <li class="list-group-item d-flex align-items-center list-group-item-action">
               <!-- <span class="badge badge-dark badge-pill">1</span> -->
               Incorporate the multivariate backwards elimination technique mobility data to build a port of entry
-              predictive model.
+              predictive model. Extract the specific ports and mobility numbers from the Naive Bayes model.
             </li>
 
             <li class="list-group-item d-flex align-items-center list-group-item-action">
@@ -568,7 +592,7 @@
         <div class="col-lg-10 mx-auto">
           <h2>About the Practitioner</h2>
           <p class="lead">Why I find this work so important.</p>
-          <div class="card mx-auto">
+          <div class="card one mx-auto">
             <div class="card-body mx-auto">
               <img class="card-img-top" src="./assets/headshot.jpg" alt="Headshot">
               <h5 class="card-title">Nancy Hinojos</h5>
